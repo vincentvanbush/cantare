@@ -36,7 +36,7 @@ defmodule Cantare.AbilitiesTest do
   # This is a fake Repo that mimics Ecto behavior of association preloading for
   # records.
   defmodule FakeRepo do
-    def preload(obj, assoc) do
+    def preload(obj, _assoc) do
       case obj do
         %Pig{id: 1} ->
           %Pig{obj | breed: %Breed{name: "Berkshire Boar", id: 2}}
