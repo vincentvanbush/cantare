@@ -5,7 +5,7 @@ defmodule Cantare.Mixfile do
     [
       app: :cantare,
       version: "0.1.0",
-      elixir: ">= 1.7",
+      elixir: "~> 1.7",
       description: "Declarative, Ecto-aware authorization rules library for Elixir",
       start_permanent: Mix.env() == :prod,
       deps: deps(),
@@ -25,7 +25,7 @@ defmodule Cantare.Mixfile do
   # Run "mix help deps" to learn about dependencies.
   defp deps do
     [
-      {:ecto, "~> 2.2.10", only: :test}
+      {:ecto, "~> 2.2.10"}
     ]
   end
 
