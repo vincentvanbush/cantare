@@ -5,9 +5,12 @@ defmodule Cantare.Mixfile do
     [
       app: :cantare,
       version: "0.1.0",
-      elixir: "~> 1.7",
+      elixir: ">= 1.7",
+      description: "Declarative, Ecto-aware authorization rules library for Elixir",
       start_permanent: Mix.env() == :prod,
-      deps: deps()
+      deps: deps(),
+      name: "Cantare",
+      source_url: "https://github.com/vincentvanbush/cantare"
     ]
   end
 
