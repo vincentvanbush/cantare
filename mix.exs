@@ -25,7 +25,8 @@ defmodule Cantare.Mixfile do
   # Run "mix help deps" to learn about dependencies.
   defp deps do
     [
-      {:ecto, "~> 2.2.10"}
+      {:ecto, "~> 2.2.10"},
+      {:ex_doc, only: :dev}
     ]
   end
 
