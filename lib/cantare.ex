@@ -1,0 +1,2 @@
+defmodule Cantare do
+end
