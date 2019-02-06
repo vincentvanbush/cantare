@@ -9,6 +9,7 @@ defmodule Cantare.Mixfile do
       description: "Declarative, Ecto-aware authorization rules library for Elixir",
       start_permanent: Mix.env() == :prod,
       deps: deps(),
+      package: package(),
       name: "Cantare",
       source_url: "https://github.com/vincentvanbush/cantare"
     ]
@@ -25,6 +26,13 @@ defmodule Cantare.Mixfile do
   defp deps do
     [
       {:ecto, "~> 2.2.10", only: :test}
+    ]
+  end
+
+  defp package do
+    [
+      licenses: ["MIT"],
+      links: %{"GitHub" => "https://github.com/vincentvanbush/scorify_elixir"}
     ]
   end
 end
