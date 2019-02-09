@@ -18,3 +18,7 @@ erl_crash.dump
 
 # Also ignore archive artifacts (built via "mix archive.build").
 *.ez
+
+# Ignore lockfile - generally, lockfiles are only really mandatory to check in for
+# end-chain apps.
+mix.lock
