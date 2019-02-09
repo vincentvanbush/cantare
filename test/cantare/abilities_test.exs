@@ -139,8 +139,8 @@ defmodule Cantare.AbilitiesTest do
       query = base_query |> ability_module.accessible_query(%Pig{role: "napoleon"}, :view)
 
       case query.from do
-        # Ecto 3
-        %Ecto.Query.FromExpr{source: source} ->
+        # Ecto 3. Explicit __struct__ resolution is used for compatibility.
+        %{__struct__: Ecto.Query.FromExpr, source: source} ->
           assert {"pigs", Pig} = query.from.source
 
         # Ecto 2
@@ -156,7 +156,7 @@ defmodule Cantare.AbilitiesTest do
 
       case query.from do
         # Ecto 3
-        %Ecto.Query.FromExpr{source: source} ->
+        %{__struct__: Ecto.Query.FromExpr, source: source} ->
           assert {"pigs", Pig} = query.from.source
 
         # Ecto 2

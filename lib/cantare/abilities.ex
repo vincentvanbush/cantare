@@ -146,8 +146,8 @@ defmodule Cantare.Abilities do
           ) do
         {_, query_schema} =
           case query.from do
-            # Ecto 3
-            %Ecto.Query.FromExpr{source: source} -> source
+            # Ecto 3. Explicit __struct__ resolution is used for compatibility.
+            %{__struct__: Ecto.Query.FromExpr, source: source} -> source
             # Ecto 2
             _ -> query.from
           end
