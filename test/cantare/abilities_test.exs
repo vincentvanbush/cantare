@@ -190,10 +190,6 @@ defmodule Cantare.AbilitiesTest do
       napoleons_sheep = %Sheep{pig_id: napoleon.id, pig: napoleon}
       assert(napoleons_sheep |> ability_module.can?(:worship, napoleon))
     end
-
-    test "accessible_query/3 called with a query"
-
-    test "accessible_query/3 called with a schema"
   end
 
   # Named setups
