@@ -5,6 +5,9 @@ otp_release:
   - 21.1
 matrix:
   include:
-    - env:
-      - ECTO_TEST_VERSION="~> 2.2"
-      - ECTO_TEST_VERSION="~> 3.0"
+    - name: "Ecto 2.2"
+      env:
+        - ECTO_TEST_VERSION="~> 2.2"
+    - name: "Ecto 3.0"
+      env:
+        - ECTO_TEST_VERSION="~> 3.0"
