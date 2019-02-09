@@ -124,6 +124,8 @@ defmodule Cantare.Abilities do
         end)
       end
 
+      require IEx
+
       def accessible_query(
             query_schema,
             %{:__struct__ => subject_schema} = subject,
@@ -142,7 +144,14 @@ defmodule Cantare.Abilities do
             %{:__struct__ => subject_schema} = subject,
             action
           ) do
-        {_, query_schema} = query.from
+        {_, query_schema} =
+          case query.from do
+            # Ecto 3
+            %Ecto.Query.FromExpr{source: source} -> source
+            # Ecto 2
+            _ -> query.from
+          end
+
         {^subject_schema, ability_list} = __MODULE__.abilities(subject_schema)
 
         # TODO: Enhance this with the ability to prepare an accessibility query for
