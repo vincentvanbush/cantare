@@ -25,7 +25,7 @@ defmodule Cantare.Mixfile do
   # Run "mix help deps" to learn about dependencies.
   defp deps do
     [
-      {:ecto, System.get_env("ECTO_TEST_VERSION") || "~> 3.0"},
+      {:ecto, System.get_env("ECTO_TEST_VERSION") || ">= 2.2"},
       {:ex_doc, only: :dev}
     ]
   end
