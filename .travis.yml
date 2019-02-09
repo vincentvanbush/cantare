@@ -1,0 +1,10 @@
+language: elixir
+elixir:
+  - 1.8.1
+otp_release:
+  - 21.1
+matrix:
+  include:
+    - env:
+      - ECTO_TEST_VERSION="~> 2.2"
+      - ECTO_TEST_VERSION="~> 3.0"
