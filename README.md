@@ -1,4 +1,4 @@
-# Cantare
+# Cantare [![Build Status](https://travis-ci.com/vincentvanbush/cantare.svg?branch=master)](https://travis-ci.com/vincentvanbush/cantare)
 
 Declarative action authorization library for Elixir, inspired by [CanCanCan](https://github.com/ryanb/cancan).
 
