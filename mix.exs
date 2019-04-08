@@ -33,7 +33,7 @@ defmodule Cantare.Mixfile do
   defp package do
     [
       licenses: ["MIT"],
-      links: %{"GitHub" => "https://github.com/vincentvanbush/scorify_elixir"}
+      links: %{"GitHub" => "https://github.com/vincentvanbush/cantare"}
     ]
   end
 end
